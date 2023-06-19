@@ -1,10 +1,10 @@
 - name: Configuring NodeJS Repos
-  ansible.builtin.shell: https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
+  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
 
 - name: Install NodeJS
   ansible.builtin.yum: 
-    - name: nodejs
-      state: installed
+     name: nodejs
+     state: installed
 
 
 
