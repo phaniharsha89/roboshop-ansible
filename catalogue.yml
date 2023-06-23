@@ -1,9 +1,0 @@
-- name: Setup Catalogue component
-  hosts: all
-  become: yes
-  vars:
-    component: catalogue
-  roles: 
-     - common
-     
-    
