@@ -20,4 +20,4 @@
     state: latest
 
 - name: Load Schema
-  ansible.builtin.shell: --host mongodb-dev.harshadevops.shop </app/schema/{{ component }}.js
+  ansible.builtin.shell: mongo --host mongodb-dev.harshadevops.shop </app/schema/{{ component }}.js
