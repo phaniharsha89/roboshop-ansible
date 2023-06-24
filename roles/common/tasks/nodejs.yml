@@ -12,12 +12,12 @@
         file: app_presetup.yml
         
 - name: Load NodeJS Dependencies
-  ansible.builtin.shell:
+  ansible.builtin.shell: npm install
   args:
     chdir: /app     
 
 
-- name: SystemD_setup
+- name: SystemD setup
   ansible.builtin.import_tasks:
         file: systemd_setup.yml
 
