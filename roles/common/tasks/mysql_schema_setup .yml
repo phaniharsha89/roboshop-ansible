@@ -1,0 +1,19 @@
+
+
+
+- name: Install MySQL Client
+  ansible.builtin.yum:
+    name:  mysql
+    state: latest
+
+- name: Load Schema
+  ansible.builtin.shell: mysql --host mysql-dev.harshadevops.shop -uroot -pRoboshop@1 </app/schema/{{ component }}.js
+
+
+- name: Mysql Schema setup
+  ansible.builtin.import_tasks:
+        file:mysql_schema_setup.yml
+
+- name: SystemD Setup
+  ansible.builtin.import_tasks:
+   file:systemd_setup.yml          
