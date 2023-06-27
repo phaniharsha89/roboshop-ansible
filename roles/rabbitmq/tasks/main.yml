@@ -1,24 +1,3 @@
-#echo -e "${color} Install Erlang Repos ${nocolor}"
-#curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash &>>/tmp/roboshop.log
-#stat_chek $?
-#
-#echo -e "${color} Install Rebbitmq Repos ${nocolor}"
-#curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash &>>/tmp/roboshop.log
-#stat_chek $?
-#
-#echo -e "${color} Install Rabbit MQ Server ${nocolor}"
-#yum install rabbitmq-server -y &>>/tmp/roboshop.log
-#stat_chek $?
-#
-#echo -e "${color} Start Rabbit MQ Service ${nocolor}"
-#systemctl enable rabbitmq-server &>>/tmp/roboshop.log
-#systemctl start rabbitmq-server &>>/tmp/roboshop.log
-#stat_chek $?
-#
-#echo -e "${color} Add Rabbit MQ Application user ${nocolor}"
-#rabbitmqctl add_user roboshop $1 &>>/tmp/roboshop.log
-#rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>/tmp/roboshop.log
-#stat_chek $?
 
 - name: Install Erlang Repos
   ansible.builtin.shell: https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
