@@ -1,4 +1,3 @@
-
 - name: Copy SystemD files
   ansible.builtin.copy:
       src: "{{ component }}.service"
