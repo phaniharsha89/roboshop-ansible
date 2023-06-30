@@ -20,6 +20,6 @@
   ansible.builtin.import_tasks:
         file: mysql_schema_setup.yml     
 
-- name: App Pre-requisites
+- name: SystemD setup
   ansible.builtin.import_tasks:
-        file: app_presetup.yml
+        file: systemd_setup.yml
