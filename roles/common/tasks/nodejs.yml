@@ -19,7 +19,7 @@
 - name: Load schema
   ansible.builtin.import_tasks:
     file: mongo_schema_setup.yml
-    when: load_schema
+  when: load_schema
 
 
 
