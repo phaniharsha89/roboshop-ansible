@@ -16,6 +16,12 @@
   args:
     chdir: /app     
 
+- name: Load schema
+  ansible.builtin.import_tasks:
+    file: mongo_schema_setup.yml
+    when: load_schema
+
+
 
 - name: SystemD setup
   ansible.builtin.import_tasks:
